@@ -25,7 +25,7 @@ import (
 
 var (
 	encryptcmd = flag.String("encryptcmd", "", "Encrypt command args")
-	decryptcmd = flag.String("decryptcmd", "", "Decrypt command args")
+	// decryptcmd = flag.String("decryptcmd", "", "Decrypt command args")
 	cryptcmd   = flag.StringP("cmd", "x", "", "Encrypted command args")
 	serverAddr = flag.StringP("server", "s", "", "Server addr (ip:port)")
 	configPath = flag.StringP("config", "c", "", "Configuration file path")
@@ -97,15 +97,15 @@ func main() {
 		return
 	}
 
-	if *decryptcmd != "" {
-		s, err := DecryptCMD(*decryptcmd)
-		if err != nil {
-			log.Error(err)
-			return
-		}
-		fmt.Println(s)
-		return
-	}
+	// if *decryptcmd != "" {
+	// 	s, err := DecryptCMD(*decryptcmd)
+	// 	if err != nil {
+	// 		log.Error(err)
+	// 		return
+	// 	}
+	// 	fmt.Println(s)
+	// 	return
+	// }
 
 	if *cryptcmd != "" {
 
