@@ -3,7 +3,7 @@
 export VERSION=0.26.10
 export GOPROXY=direct
 
-type -p go1 || { 
+type -p go || { 
     echo "[ERROR] GO required, but not found"
     exit
 }
