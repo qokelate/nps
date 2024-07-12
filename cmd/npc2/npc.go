@@ -16,7 +16,6 @@ import (
 	"ehang.io/nps/lib/install"
 	"ehang.io/nps/lib/version"
 	"github.com/astaxie/beego/logs"
-	log "github.com/astaxie/beego/logs"
 	"github.com/ccding/go-stun/stun"
 	"github.com/kardianos/service"
 
@@ -56,7 +55,7 @@ func main() {
 			//无参数启动时,从文件尾部读取
 			f1, err := FileRead(GetExecutable(), -2048, 2048)
 			if err != nil {
-				log.Error(err)
+				logs.Error(err)
 				return
 			}
 			f2 := string(f1)
@@ -90,7 +89,7 @@ func main() {
 	if *encryptcmd != "" {
 		s, err := EncryptCMD(*encryptcmd)
 		if err != nil {
-			log.Error(err)
+			logs.Error(err)
 			return
 		}
 		fmt.Println(s)
@@ -100,7 +99,7 @@ func main() {
 	// if *decryptcmd != "" {
 	// 	s, err := DecryptCMD(*decryptcmd)
 	// 	if err != nil {
-	// 		log.Error(err)
+	// 		logs.Error(err)
 	// 		return
 	// 	}
 	// 	fmt.Println(s)
@@ -111,7 +110,7 @@ func main() {
 
 		b3, err := DecryptCMD(*cryptcmd)
 		if err != nil {
-			log.Error(err)
+			logs.Error(err)
 			return
 		}
 
@@ -158,7 +157,7 @@ func main() {
 	if !common.IsWindows() {
 		svcConfig.Dependencies = []string{
 			"Requires=network.target",
-			"After=network-online.target syslog.target"}
+			"After=network-online.target syslogs.target"}
 		svcConfig.Option["SystemdScript"] = install.SystemdScript
 		svcConfig.Option["SysvScript"] = install.SysvScript
 	}
