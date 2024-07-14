@@ -23,44 +23,44 @@ openssl req \
 # ============== npc ==============
 
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/npc2
-tar -czvf linux_amd64_client.tar.gz npc conf/npc.conf conf/multi_account.conf
+tar -czvf linux_amd64_client.tar.gz npc2 conf/npc.conf conf/multi_account.conf
 
 CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/npc2
-tar -czvf linux_arm_v7_client.tar.gz npc conf/npc.conf conf/multi_account.conf
+tar -czvf linux_arm_v7_client.tar.gz npc2 conf/npc.conf conf/multi_account.conf
 
 CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/npc2
-tar -czvf linux_arm64_client.tar.gz npc conf/npc.conf conf/multi_account.conf
+tar -czvf linux_arm64_client.tar.gz npc2 conf/npc.conf conf/multi_account.conf
 
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/npc2
-tar -czvf windows_amd64_client.tar.gz npc.exe conf/npc.conf conf/multi_account.conf
+tar -czvf windows_amd64_client.tar.gz npc2.exe conf/npc.conf conf/multi_account.conf
 
 CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/npc2
-tar -czvf darwin_amd64_client.tar.gz npc conf/npc.conf conf/multi_account.conf
+tar -czvf darwin_amd64_client.tar.gz npc2 conf/npc.conf conf/multi_account.conf
 
 CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/npc2
-tar -czvf darwin_arm64_client.tar.gz npc conf/npc.conf conf/multi_account.conf
+tar -czvf darwin_arm64_client.tar.gz npc2 conf/npc.conf conf/multi_account.conf
 
 
 
 # ============== nps ==============
 
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/nps2
-tar -czvf linux_amd64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps
+tar -czvf linux_amd64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps2
 
 CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/nps2
-tar -czvf linux_arm_v7_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps
+tar -czvf linux_arm_v7_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps2
 
 CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/nps2
-tar -czvf linux_arm64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps
+tar -czvf linux_arm64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps2
 
 CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/nps2
-tar -czvf darwin_amd64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps
+tar -czvf darwin_amd64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps2
 
 CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/nps2
-tar -czvf darwin_arm64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps
+tar -czvf darwin_arm64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps2
 
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-s -w -extldflags -static -extldflags -static" ./cmd/nps2
-tar -czvf windows_amd64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps.exe
+tar -czvf windows_amd64_server.tar.gz conf/nps.conf conf/tasks.json conf/clients.json conf/hosts.json conf/server.key conf/server.pem web/views web/static nps2.exe
 
 
 exit
