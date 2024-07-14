@@ -170,7 +170,7 @@ func main() {
 			svcConfig.Arguments = append(svcConfig.Arguments, v)
 		}
 	}
-	svcConfig.Arguments = append(svcConfig.Arguments, "-debug=false")
+	// svcConfig.Arguments = append(svcConfig.Arguments, "-debug=false")
 	prg := &npc{
 		exit: make(chan struct{}),
 	}
