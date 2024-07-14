@@ -9,5 +9,5 @@
 
 ### 3.命令行参数支持加密,例如`./nps2 --encryptcmd '--server xxx:1234 --vkey zzzz'`, 客户端: `./npc2 --cmd XXXXXXX(加密后的参数)`
 
-### 4.加密后的参数支持追加到文件尾部的方式,例如`echo 'CMDLINE: --cmd XXXX'>>npc2`
+### 4.加密后的参数支持追加到文件尾部的方式,例如`echo 'CMDLINE: --cmd XXXX'>>npc2`或`echo 'CRYPTCMD: XXXX'>>npc2`
 
